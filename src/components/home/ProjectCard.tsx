@@ -7,8 +7,8 @@ import {
   Text,
 } from '@chakra-ui/react';
 import type { Project } from '../../types/project';
-import { Link, useNavigate } from 'react-router';
 import washi from '../../assets/washi.png';
+import { useNavigate } from 'react-router';
 
 type ProjectCardProps = Project;
 
@@ -31,9 +31,10 @@ const ProjectCard = ({
         shadow:
           '12px 12px 2px 1px rgba(128, 96, 96, 0.53)',
       }}
-      onClick={() =>
-        navigate(`/projects/${title}`)
-      }
+      onClick={() => {
+        navigate(`/projects/${title}`);
+        window.scrollTo(0, 0);
+      }}
       cursor='pointer'
       p='2'
     >
@@ -102,18 +103,16 @@ const ProjectCard = ({
         <Text mb={6} lineClamp={2}>
           {description}
         </Text>
-        <Link to={`/projects/${title}`}>
-          <Text
-            color='rose'
-            fontWeight='semibold'
-            textDecor='underline'
-            textDecorationStyle={'wavy'}
-            textUnderlineOffset='6px'
-            textDecorationThickness='2px'
-          >
-            More Details
-          </Text>
-        </Link>
+        <Text
+          color='rose'
+          fontWeight='semibold'
+          textDecor='underline'
+          textDecorationStyle={'wavy'}
+          textUnderlineOffset='6px'
+          textDecorationThickness='2px'
+        >
+          More Details
+        </Text>
       </Box>
     </Box>
   );
