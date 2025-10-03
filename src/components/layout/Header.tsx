@@ -8,10 +8,16 @@ import {
 } from '@chakra-ui/react';
 import logo from '../../assets/logo.svg';
 import { useState } from 'react';
+import {
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 
 function Header() {
   const CV = '/CV.pdf';
   const [active, setActive] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     'projects',
@@ -20,12 +26,17 @@ function Header() {
   ] as const;
 
   const handleNavigation = (section: string) => {
-    if (section !== 'cv') {
-      setActive(section);
+    if (section === 'cv') return;
+
+    setActive(section);
+
+    if (location.pathname === '/') {
       const el = document.getElementById(section);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      navigate(`/?scrollTo=${section}`);
     }
   };
 
