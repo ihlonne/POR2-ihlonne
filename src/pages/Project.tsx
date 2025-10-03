@@ -12,8 +12,6 @@ import {
 import { Link, useParams } from 'react-router';
 import { projects } from '../data/mock-data';
 
-import arrow from '../assets/arrow.png';
-
 const Project = () => {
   const url = window.location.href;
 
@@ -259,28 +257,6 @@ const Project = () => {
           </Link>
         </Stack>
       </Flex>
-      <Box
-        position='fixed'
-        bottom='60px'
-        right='20px'
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          })
-        }
-        cursor='pointer'
-        _hover={{
-          opacity: '0.6',
-          transform: 'translateX(-2px)',
-        }}
-      >
-        <Image
-          src={arrow}
-          alt='down arrow'
-          w='80px'
-        />
-      </Box>
     </Flex>
   );
 };
