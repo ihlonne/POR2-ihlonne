@@ -47,7 +47,6 @@ function Header() {
         w={{ base: 0, md: '100%' }}
       />
 
-      {/* Logo – sender deg hjem og nullstiller active */}
       <Link
         href='/'
         _hover={{ opacity: 0.8 }}
@@ -62,7 +61,6 @@ function Header() {
         />
       </Link>
 
-      {/* Navigation */}
       <HStack
         display='inline-flex'
         listStyle='none'
@@ -106,7 +104,6 @@ function Header() {
               </Link>
             )}
 
-            {/* Underline for active link */}
             {active === item && (
               <Box
                 position='absolute'
