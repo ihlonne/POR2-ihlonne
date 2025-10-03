@@ -11,10 +11,12 @@ import { projects } from '../../data/mock-data';
 const Projects = () => {
   return (
     <Flex
+      as='section'
       direction='column'
-      align='flex-start'
+      minH='100dvh'
       maxW='1290px'
       w='100%'
+      justifyContent='center'
       mt={{ base: '2rem', md: 0 }}
     >
       <Heading as='h1' mb='2rem' size='4xl'>
