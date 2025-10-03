@@ -39,6 +39,7 @@ const About = () => {
 
   return (
     <Flex
+      as='section'
       direction='column'
       minH='100dvh'
       maxW='1290px'
