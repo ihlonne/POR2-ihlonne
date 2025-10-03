@@ -1,18 +1,18 @@
 import {
-  Badge,
   Box,
   Button,
   Clipboard,
   Flex,
   Heading,
   Image,
-  Separator,
   Stack,
   Text,
 } from '@chakra-ui/react';
 
 import { Link, useParams } from 'react-router';
 import { projects } from '../data/mock-data';
+
+import arrow from '../assets/arrow.png';
 
 const Project = () => {
   const url = window.location.href;
@@ -32,6 +32,7 @@ const Project = () => {
 
   return (
     <Flex
+      as='main'
       justifyContent='center'
       minH='100dvh'
       w='100%'
@@ -77,8 +78,75 @@ const Project = () => {
               </Clipboard.Trigger>
             </Clipboard.Root>
           </Flex>
+          <Box position='relative' mt='4rem'>
+            <Box
+              position='absolute'
+              bottom='-4px'
+              left={0}
+              w='100%'
+              h='8px'
+              bg='rose'
+              opacity='0.7'
+              transform='rotate(-1deg)'
+              borderRadius='2px'
+              zIndex={0}
+            />
 
-          <Box mt='2rem'>
+            <Box
+              position='absolute'
+              bottom='-10px'
+              left='10px'
+              w='95%'
+              h='10px'
+              bg='pink'
+              opacity='0.4'
+              transform='rotate(1deg)'
+              borderRadius='2px'
+              zIndex={0}
+            />
+            <Box
+              position='absolute'
+              bottom='-10px'
+              left='10px'
+              w='95%'
+              h='10px'
+              bg='pink'
+              opacity='0.4'
+              transform='rotate(1deg)'
+              borderRadius='2px'
+              zIndex={0}
+            />
+            <Box
+              position='absolute'
+              bottom='-10px'
+              left='10px'
+              w='95%'
+              h='10px'
+              bg='pink'
+              opacity='0.4'
+              transform='rotate(1deg)'
+              borderRadius='2px'
+              zIndex={0}
+            />
+            <Box
+              position='absolute'
+              bottom='-10px'
+              left='10px'
+              w='95%'
+              h='10px'
+              bg='pink'
+              opacity='0.4'
+              transform='rotate(0deg)'
+              borderRadius='2px'
+              zIndex={0}
+            />
+          </Box>
+
+          <Flex
+            alignItems='end'
+            gap='4'
+            mt='2rem'
+          >
             <Heading
               as='h2'
               size='md'
@@ -86,27 +154,21 @@ const Project = () => {
             >
               Made with:
             </Heading>
-            {project.tags.map((tag) => (
-              <Badge
-                bg='transparent'
-                border='1px solid'
-                borderColor='green'
-                color='green'
-                key={tag}
-                textTransform='uppercase'
-                mr='1'
-                mt='2'
-              >
-                {tag}
-              </Badge>
-            ))}
-          </Box>
+            <Flex gap='2'>
+              {project.tags.map((tag) => (
+                <Text
+                  textDecor='underline'
+                  textDecorationStyle={'wavy'}
+                  textUnderlineOffset='6px'
+                  textDecorationThickness='2px'
+                >
+                  {tag}
+                </Text>
+              ))}
+            </Flex>
+          </Flex>
         </Flex>
-        <Separator
-          w='100%'
-          color='green'
-          mt='4rem'
-        />
+
         <Flex
           my='4rem'
           direction='column'
@@ -170,6 +232,7 @@ const Project = () => {
               bg='rose'
               color='white'
               fontWeight='semibold'
+              textTransform='uppercase'
               _hover={{
                 bg: 'green',
               }}
@@ -196,6 +259,28 @@ const Project = () => {
           </Link>
         </Stack>
       </Flex>
+      <Box
+        position='fixed'
+        bottom='60px'
+        right='20px'
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          })
+        }
+        cursor='pointer'
+        _hover={{
+          opacity: '0.6',
+          transform: 'translateX(-2px)',
+        }}
+      >
+        <Image
+          src={arrow}
+          alt='down arrow'
+          w='80px'
+        />
+      </Box>
     </Flex>
   );
 };
