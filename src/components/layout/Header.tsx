@@ -37,16 +37,22 @@ function Header() {
       gap='6'
       pt='8'
       color='text'
+      top='0'
+      left='0'
+      zIndex={1000}
     >
       <Separator
         bg='green'
         height='2px'
         w={{ base: 0, md: '100%' }}
       />
+
+      {/* Logo – sender deg hjem og nullstiller active */}
       <Link
         href='/'
         _hover={{ opacity: 0.8 }}
         flexShrink={0}
+        onClick={() => setActive('')}
       >
         <Image
           src={logo}
@@ -56,6 +62,7 @@ function Header() {
         />
       </Link>
 
+      {/* Navigation */}
       <HStack
         display='inline-flex'
         listStyle='none'
@@ -98,6 +105,8 @@ function Header() {
                 {item}
               </Link>
             )}
+
+            {/* Underline for active link */}
             {active === item && (
               <Box
                 position='absolute'
@@ -105,12 +114,14 @@ function Header() {
                 bottom='-5px'
                 width='100%'
                 height='2px'
+                bg='brand.900'
                 transition='0.3s ease-in-out'
               />
             )}
           </Box>
         ))}
       </HStack>
+
       <Separator
         bg='green'
         height='2px'
