@@ -13,6 +13,7 @@ import doodle from '../../assets/doodle.png';
 const Hero = () => {
   return (
     <Flex
+      as='section'
       direction={{ base: 'column', lg: 'row' }}
       justifyContent='space-between'
       alignItems='center'
@@ -110,7 +111,7 @@ const Hero = () => {
               textTransform='uppercase'
               fontFamily='body'
               fontSize={{ base: 'xl', md: '4xl' }}
-              letterSpacing='1px'
+              letterSpacing='10px'
               color='pink'
               position='relative'
               zIndex={1}
