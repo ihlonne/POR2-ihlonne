@@ -5,11 +5,12 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   Stack,
   Text,
 } from '@chakra-ui/react';
 
-import { Link, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { projects } from '../data/mock-data';
 
 const Project = () => {
@@ -155,6 +156,7 @@ const Project = () => {
             <Flex gap='2'>
               {project.tags.map((tag) => (
                 <Text
+                  key={tag}
                   textDecor='underline'
                   textDecorationStyle={'wavy'}
                   textUnderlineOffset='6px'
@@ -224,7 +226,10 @@ const Project = () => {
           </Flex>
         </Flex>
         <Stack direction='row' gap={4}>
-          <Link to={project.live}>
+          <Link
+            href={project.live}
+            target='_blank'
+          >
             <Button
               size='sm'
               bg='rose'
@@ -238,7 +243,10 @@ const Project = () => {
               Live Preview
             </Button>
           </Link>
-          <Link to={project.github}>
+          <Link
+            href={project.github}
+            target='_blank'
+          >
             <Button
               size='sm'
               variant='outline'
