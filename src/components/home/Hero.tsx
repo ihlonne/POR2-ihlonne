@@ -11,6 +11,12 @@ import selfie from '../../assets/selfie1.png';
 import doodle from '../../assets/doodle.png';
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Flex
       as='section'
@@ -217,6 +223,9 @@ const Hero = () => {
             base: 'center',
             md: 'unset',
           }}
+          onClick={() =>
+            scrollToSection('projects')
+          }
         >
           View Projects
         </Button>
