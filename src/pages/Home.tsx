@@ -37,6 +37,7 @@ const Home = () => {
       align='center'
       justify='center'
       minH='100dvh'
+      gap={{ base: '4rem', md: 0 }}
       w={{ base: '90%', lg: '100%' }}
       mt={{ base: '2rem', md: 0 }}
       mx='auto'
