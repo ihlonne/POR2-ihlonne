@@ -60,7 +60,6 @@ function Header() {
 
       <Link
         href='/'
-        _hover={{ opacity: 0.8 }}
         flexShrink={0}
         onClick={() => setActive('')}
       >
@@ -87,11 +86,11 @@ function Header() {
             {item === 'cv' ? (
               <Link
                 href={CV}
-                download='CV.pdf'
+                download='CV.png'
                 fontWeight='bold'
                 color='text'
                 _hover={{
-                  color: 'brand.900',
+                  color: 'rose',
                   textDecoration: 'none',
                 }}
               >
