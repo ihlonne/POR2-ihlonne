@@ -60,10 +60,22 @@ export const projects = [
     title: 'Evergreen',
     image: evergreen,
     description:
-      'A basic e-commerce site where I was introduced to Next.js and TypeScript.',
-    live: 'https://jsfw-2025-v1-ihlonne.vercel.app/',
+      'Evergreen is a small front-end project built to demonstrate the use of a modern CSS framework in a responsive layout. The goal was to apply Tailwind CSS effectively by following documentation, structuring styles for scalability, and ensuring consistent design across different screen sizes. The app mimics a minimal social media concept with three pages — an authentication page with form validation, a feed displaying posts with search and sort features, and a user profile page with a follower section. This assignment emphasized planning responsive design, maintaining clean class structures, and working with npm scripts for both development and production builds. Although a lightweight project, Evergreen served as a hands-on exercise in practical framework usage and UI consistency.',
+
+    features: [
+      'Authentication page',
+      'Feed page',
+      'Profile page',
+    ],
+    techStack: [
+      'HTML5',
+      'Tailwind v4',
+      'PostCSS + Autoprefixer',
+      'JavaScript',
+    ],
+    live: 'https://ihlonne-css-frameworks.netlify.app/',
     github:
-      'https://github.com/NoroffFEU/jsfw-2025-v1-ihlonne',
+      'https://github.com/ihlonne/css-frameworks-ca',
     tags: ['html', 'tailwind', 'javascript'],
   },
 ];
