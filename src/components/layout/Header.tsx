@@ -14,7 +14,7 @@ import {
 } from 'react-router-dom';
 
 function Header() {
-  const CV = '/CV.pdf';
+  const CV = '/CV.png';
   const [active, setActive] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
