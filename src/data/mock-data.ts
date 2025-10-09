@@ -4,32 +4,6 @@ import evergreen from '../assets/evergreen.png';
 
 export const projects = [
   {
-    title: 'NexBid',
-    image: nexbid,
-    description:
-      'NexBid is a React-based auction marketplace that allows users to create listings, place bids, and manage their profiles. It features an intuitive UI, real-time bidding updates, and a seamless user experience for both buyers and sellers.',
-    features: [
-      'User Authentication - Sign up, log in, and manage your profile',
-      'Bidding System - Place bids on auctions in real-time',
-      'Auction Listings - View and filter auctions based on categories',
-      'Favorites System - Save auctions for later',
-      'Mobile Responsive Design - Optimized for all devices',
-      'Secure API Requests - Uses authentication tokens for protected routes',
-    ],
-    techStack: [
-      'React',
-      'Vite',
-      'Chakra UI',
-      'Axios',
-      'React Router',
-      'Date-fns',
-    ],
-    live: 'https://sp2-ihlonne.netlify.app/',
-    github:
-      'https://github.com/ihlonne/SP2-ihlonne',
-    tags: ['react', 'chakra ui', 'api'],
-  },
-  {
     title: 'BliNK',
     image: blink,
     description:
@@ -55,6 +29,32 @@ export const projects = [
     github:
       'https://github.com/NoroffFEU/jsfw-2025-v1-ihlonne',
     tags: ['next.js', 'tailwind', 'api'],
+  },
+  {
+    title: 'NexBid',
+    image: nexbid,
+    description:
+      'NexBid is a React-based auction marketplace that allows users to create listings, place bids, and manage their profiles. It features an intuitive UI, real-time bidding updates, and a seamless user experience for both buyers and sellers.',
+    features: [
+      'User Authentication - Sign up, log in, and manage your profile',
+      'Bidding System - Place bids on auctions in real-time',
+      'Auction Listings - View and filter auctions based on categories',
+      'Favorites System - Save auctions for later',
+      'Mobile Responsive Design - Optimized for all devices',
+      'Secure API Requests - Uses authentication tokens for protected routes',
+    ],
+    techStack: [
+      'React',
+      'Vite',
+      'Chakra UI',
+      'Axios',
+      'React Router',
+      'Date-fns',
+    ],
+    live: 'https://sp2-ihlonne.netlify.app/',
+    github:
+      'https://github.com/ihlonne/SP2-ihlonne',
+    tags: ['react', 'chakra ui', 'api'],
   },
   {
     title: 'Evergreen',
